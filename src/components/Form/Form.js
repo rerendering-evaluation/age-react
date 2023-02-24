@@ -16,10 +16,14 @@ const Form = ({setAgePerson}) => {
         <div className={'form'}>
             <form onSubmit={handleSubmit(submit)}>
                 <input type="text" {...register('dateAge', {
-                    required: 'Поле повинно бути заповнене!'
+                    required: 'Поле повинно бути заповнене!',
+                    // pattern: {
+                    //     value: /[A-Za-z]{3}/,
+                    //     message: 'помилка вводу даних'
+                    // }
                 })} placeholder={'2000-00-00'}/>
 
-                <button>send</button>
+                <button disabled={!isValid}>send</button>
 
                 <div>
                     {errors?.dateAge && <p>{errors?.dateAge?.message || 'Error'}</p>}

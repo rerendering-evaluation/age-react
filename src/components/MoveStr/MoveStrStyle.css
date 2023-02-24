@@ -1,0 +1,19 @@
+.container {
+    text-align: center;
+}
+
+.text {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease-out;
+}
+
+.text.show {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+
+
+
+
