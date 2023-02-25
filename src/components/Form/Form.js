@@ -23,7 +23,7 @@ const Form = ({setAgePerson}) => {
                     // }
                 })} placeholder={'2000-00-00'}/>
 
-                <button disabled={!isValid}>send</button>
+                <button disabled={!isValid} className={'form-btn'}>send</button>
 
                 <div>
                     {errors?.dateAge && <p>{errors?.dateAge?.message || 'Error'}</p>}
