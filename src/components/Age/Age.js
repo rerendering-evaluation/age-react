@@ -6,7 +6,7 @@ import Form from "../Form/Form";
 
 const Age = () => {
     const [age, setAge] = useState({years: 0, months: 0, days: 0, hours: 0, minutes: 0, seconds: 0});
-    const [agePerson, setAgePerson] = useState('1970-01-01');
+    const [agePerson, setAgePerson] = useState("1970-01-01");
 
     useEffect(() => {
         const interval = setInterval(() => {

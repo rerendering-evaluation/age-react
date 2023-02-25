@@ -5,20 +5,56 @@
 }
 
 input {
-    width: 45%;
+    width: 20%;
     padding: 0.1rem 2rem;
-    border-radius: 0.5rem 0 0 0.5rem;
+    border-radius: 0.8rem;
     box-shadow: 0.2rem 0.2rem 0.2rem darkgreen;
     font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+label {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-transform: uppercase;
 }
 
 .form-btn {
-    width: 5%;
-    font-size: 0.6rem;
-    padding: 0.6rem 0;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 0.1rem 0;
     box-shadow: 0.2rem 0.2rem 0.2rem darkgreen;
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-radius: 1.5rem;
     background: gainsboro;
     color: black;
     text-transform: uppercase;
+    margin: 0 0 0 0.5rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.form-btn:hover {
+    transform: scale(1.1, 1.1);
+    background: darkgreen;
+    color: gold;
+}
+
+.textForm {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 1s ease-out;
+}
+
+.textForm.showForm {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0%);
+    font-weight: bold;
+    font-size: 3rem;
+    font-style: italic;
+    color: gold;
+    text-shadow: 0.2rem 0.2rem 0.2rem darkgreen;
+    margin-bottom: 1rem;
 }

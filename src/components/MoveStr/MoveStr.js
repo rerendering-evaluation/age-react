@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 
 import "./MoveStrStyle.css";
 
@@ -31,9 +31,10 @@ const MoveStr = ({setIsVisibleAge, isVisibleAge}) => {
 
             <div className={`text ${showText1 ? "show" : ""}`}>
                 <button
-                    onClick={()=>setIsVisibleAge(!isVisibleAge)}
+                    onClick={() => setIsVisibleAge(!isVisibleAge)}
                     className={'btn'}
-                >click</button>
+                >click
+                </button>
             </div>
         </div>
     );
