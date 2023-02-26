@@ -1,3 +1,36 @@
-.age{
+.age {
     width: 100%;
+}
+
+.textBlock {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5rem 0 0 0;
+}
+
+.textAge {
+    opacity: 0;
+    transform: translateX(50%);
+    transition: all 1s ease-out;
+}
+
+.textAge.showAge {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0%);
+    font-weight: bold;
+    font-size: 3rem;
+    font-style: italic;
+    color: gold;
+    text-shadow: 0.2rem 0.2rem 0.2rem darkgreen;
+}
+
+.infoAge {
+    color: darkgreen;
+    text-shadow: 0.2rem 0.2rem 0.2rem black;
+    font-weight: bold;
+    font-size: 5rem;
+    font-style: italic;
+    margin: 2rem 0 0 0;
 }
