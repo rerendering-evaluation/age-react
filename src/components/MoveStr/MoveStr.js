@@ -18,7 +18,7 @@ const MoveStr = ({setIsVisibleAge, isVisibleAge}) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowText1(true);
-        }, 5000);
+        }, 3000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -33,7 +33,7 @@ const MoveStr = ({setIsVisibleAge, isVisibleAge}) => {
                 <button
                     onClick={() => setIsVisibleAge(!isVisibleAge)}
                     className={'btn'}
-                >click
+                >show
                 </button>
             </div>
         </div>

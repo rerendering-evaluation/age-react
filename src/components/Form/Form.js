@@ -44,7 +44,7 @@ const Form = ({setAgePerson}) => {
                                     message: 'max length 4'
                                 },
                                 pattern: {
-                                    value: /^[^\d.-e]*\d{4}[^\d.-e]*$/,
+                                    value: /^[^\d.-e]*\d{4}[^\d.-]*$/,
                                     message: 'помилка вводу даних'
                                 }
                             })} placeholder={'0000'}/>
