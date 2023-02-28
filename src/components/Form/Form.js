@@ -29,26 +29,68 @@ const Form = ({setAgePerson}) => {
             </div>
 
             <form onSubmit={handleSubmit(submit)}>
-                <label>year:</label>
-                <input type="number" {...register('year', {
-                    required: 'Поле повинно бути заповнене!',
-                })} placeholder={'0000'}/>
+                <div className={'inpContainer'}>
+                    <div className={'inputBlock'}>
+                        <div>
+                            <label>year:</label>
+                            <input type="number" {...register('year', {
+                                required: 'Поле повинно бути заповнене!',
+                                minLength: {
+                                    value: 4,
+                                    message: 'min length 4'
+                                },
+                                maxLength: {
+                                    value: 4,
+                                    message: 'max length 4'
+                                },
+                                pattern: {
+                                    value: /^[^\d.-e]*\d{4}[^\d.-e]*$/,
+                                    message: 'помилка вводу даних'
+                                }
+                            })} placeholder={'0000'}/>
+                        </div>
 
-                <label>month:</label>
-                <input type="number" {...register('month', {
-                    required: 'Поле повинно бути заповнене!',
-                })} placeholder={'00'}/>
+                        <div className={"error"}>
+                            {errors?.year && <p>{errors?.year?.message || 'Error'}</p>}
+                        </div>
+                    </div>
 
-                <label>day:</label>
-                <input type="number" {...register('day', {
-                    required: 'Поле повинно бути заповнене!',
-                })} placeholder={'00'}/>
+                    <div className={'inputBlock'}>
+                        <div>
+                            <label>month:</label>
+                            <input type="number" {...register('month', {
+                                required: 'Поле повинно бути заповнене!',
+                                minLength: {
+                                    value: 2,
+                                    message: 'min length 2'
+                                },
+                                maxLength: {
+                                    value: 2,
+                                    message: 'max length 2'
+                                },
+                            })} placeholder={'00'}/>
+                        </div>
+
+                        <div className={"error"}>
+                            {errors?.month && <p>{errors?.month?.message || 'Error'}</p>}
+                        </div>
+                    </div>
+
+                    <div className={'inputBlock'}>
+                        <div>
+                            <label>day:</label>
+                            <input type="number" {...register('day', {
+                                required: 'Поле повинно бути заповнене!',
+                            })} placeholder={'00'}/>
+                        </div>
+
+                        <div className={"error"}>
+                            {errors?.day && <p>{errors?.day?.message || 'Error'}</p>}
+                        </div>
+                    </div>
+                </div>
 
                 <button disabled={!isValid} className={'form-btn'}>ok</button>
-
-                <div>
-                    {errors?.dateAge && <p>{errors?.dateAge?.message || 'Error'}</p>}
-                </div>
             </form>
         </div>
     );
